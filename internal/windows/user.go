@@ -9,9 +9,9 @@ import (
 func UserDrive() string {
 	if env := os.ExpandEnv("$HOMEDRIVE"); len(env) > 0 {
 		return env
-	} else {
-		return "C:"
 	}
+
+	return "C:"
 }
 
 func EnumUsers(sysroot string, out chan<- string) {
@@ -22,23 +22,23 @@ func EnumUsers(sysroot string, out chan<- string) {
 	root := filepath.Join(sysroot, "Users")
 
 	if _, err := os.Stat(root); err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		_, _ = fmt.Fprintln(os.Stderr, err)
 		return
 	}
 
 	r, err := os.Open(root)
 
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		_, _ = fmt.Fprintln(os.Stderr, err)
 		return
 	}
 
 	dir, err := r.Readdir(-1)
 
-	r.Close()
+	_ = r.Close()
 
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		_, _ = fmt.Fprintln(os.Stderr, err)
 		return
 	}
 
@@ -60,7 +60,7 @@ func EnumUsers(sysroot string, out chan<- string) {
 			files, err := filepath.Glob(filepath.Join(root, fi.Name(), artifact))
 
 			if err != nil {
-				fmt.Fprintln(os.Stderr, err)
+				_, _ = fmt.Fprintln(os.Stderr, err)
 				continue
 			}
 

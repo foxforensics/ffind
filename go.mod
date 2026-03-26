@@ -1,13 +1,13 @@
-module github.com/cuhsat/ffind
+module github.com/f0x4n6/ffind
 
-go 1.24
+go 1.26
 
 require (
-	github.com/cuhsat/futils v0.1.4
-	github.com/mxk/go-vss v1.2.0
+	github.com/f0x4n6/futils v0.1.6
+	github.com/mxk/go-vss v1.2.1
 )
 
 require (
 	github.com/go-ole/go-ole v1.3.0 // indirect
-	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/sys v0.42.0 // indirect
 )

@@ -7,8 +7,8 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/cuhsat/futils/pkg/sys"
-	"github.com/cuhsat/futils/pkg/zip"
+	"github.com/f0x4n6/futils/pkg/sys"
+	"github.com/f0x4n6/futils/pkg/zip"
 )
 
 var (
@@ -60,7 +60,7 @@ func TestFind(t *testing.T) {
 		})
 
 		if _, err := os.Stat(sysroot); !os.IsNotExist(err) {
-			os.RemoveAll(sysroot)
+			_ = os.RemoveAll(sysroot)
 		}
 	}
 }
@@ -82,7 +82,7 @@ func BenchmarkFind(b *testing.B) {
 		b.StopTimer()
 
 		if _, err := os.Stat(sysroot); !os.IsNotExist(err) {
-			os.RemoveAll(sysroot)
+			_ = os.RemoveAll(sysroot)
 		}
 	})
 }

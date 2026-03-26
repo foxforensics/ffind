@@ -1,12 +1,12 @@
 # ffind
-[![Go Reference](https://pkg.go.dev/badge/github.com/cuhsat/ffind.svg)](https://pkg.go.dev/github.com/cuhsat/ffind)
-[![Go Report Card](https://goreportcard.com/badge/github.com/cuhsat/ffind?style=flat-square)](https://goreportcard.com/report/github.com/cuhsat/ffind)
-[![Release](https://img.shields.io/github/release/cuhsat/ffind.svg?style=flat-square)](https://github.com/cuhsat/ffind/releases/latest)
+[![Go Reference](https://pkg.go.dev/badge/github.com/f0x4n6/ffind.svg)](https://pkg.go.dev/github.com/f0x4n6/ffind)
+[![Go Report Card](https://goreportcard.com/badge/github.com/f0x4n6/ffind?style=flat-square)](https://goreportcard.com/report/github.com/f0x4n6/ffind)
+[![Release](https://img.shields.io/github/release/f0x4n6/ffind.svg?style=flat-square)](https://github.com/f0x4n6/ffind/releases/latest)
 
 Find forensic artifacts in mount points or the live system.
 
 ```console
-go install github.com/cuhsat/ffind@latest
+go install github.com/f0x4n6/ffind@latest
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ Available options:
 - `-h` Show usage
 - `-v` Show version
 
-## Aritfacts
+## Artifacts
 Supported artifacts for Windows 7+ systems:
 
 - [System Active Directory](https://forensics.wiki/active_directory/)

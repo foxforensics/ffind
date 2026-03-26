@@ -7,11 +7,11 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/cuhsat/futils/pkg/hash"
-	"github.com/cuhsat/futils/pkg/sys"
-	"github.com/cuhsat/futils/pkg/zip"
+	"github.com/f0x4n6/futils/pkg/hash"
+	"github.com/f0x4n6/futils/pkg/sys"
+	"github.com/f0x4n6/futils/pkg/zip"
 
-	"github.com/cuhsat/ffind/internal/windows"
+	"github.com/f0x4n6/ffind/internal/windows"
 )
 
 const (
@@ -146,13 +146,13 @@ func (ff *ffind) comp(in <-chan string, out chan<- string) {
 	defer close(out)
 	defer ff.wg.Done()
 
-	z, err := zip.NewZip(ff.zip, fmt.Sprintf("ffind %s", Version))
+	z, err := zip.New(ff.zip, fmt.Sprintf("ffind %s", Version))
 
 	if err != nil {
 		sys.Fatal(err)
 	}
 
-	defer z.Close()
+	defer func() { _ = z.Close() }()
 
 	for artifact := range in {
 		err := z.Write(artifact, ff.path(artifact))
@@ -175,7 +175,7 @@ func (ff *ffind) list(in <-chan string, out chan<- string) {
 		sys.Fatal(err)
 	}
 
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
 	w := csv.NewWriter(f)
 

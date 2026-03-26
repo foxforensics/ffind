@@ -9,9 +9,9 @@ import (
 func SystemDrive() string {
 	if env := os.ExpandEnv("$SYSTEMDRIVE"); len(env) > 0 {
 		return env
-	} else {
-		return "C:"
 	}
+
+	return "C:"
 }
 
 func EnumSystem(sysroot string, out chan<- string) {
@@ -22,7 +22,7 @@ func EnumSystem(sysroot string, out chan<- string) {
 	root := filepath.Join(sysroot, "Windows")
 
 	if _, err := os.Stat(root); err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		_, _ = fmt.Fprintln(os.Stderr, err)
 	}
 
 	for _, artifact := range [...]string{
@@ -40,7 +40,7 @@ func EnumSystem(sysroot string, out chan<- string) {
 		files, err := filepath.Glob(filepath.Join(root, artifact))
 
 		if err != nil {
-			fmt.Fprintln(os.Stderr, err)
+			_, _ = fmt.Fprintln(os.Stderr, err)
 			continue
 		}
 
