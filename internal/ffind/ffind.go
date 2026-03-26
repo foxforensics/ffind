@@ -22,7 +22,7 @@ const (
 )
 
 const (
-	Version = "0.5.2"
+	Version = "0.5.5"
 )
 
 type ffind struct {
