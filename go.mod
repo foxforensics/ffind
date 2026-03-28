@@ -1,10 +1,10 @@
-module github.com/f0x4n6/ffind
+module go.foxforensics.dev/ffind
 
 go 1.26
 
 require (
-	github.com/f0x4n6/futils v0.1.6
 	github.com/mxk/go-vss v1.2.1
+	go.foxforensics.dev/futils v0.1.7
 )
 
 require (

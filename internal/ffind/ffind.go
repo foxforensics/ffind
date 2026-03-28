@@ -7,11 +7,11 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/f0x4n6/futils/pkg/hash"
-	"github.com/f0x4n6/futils/pkg/sys"
-	"github.com/f0x4n6/futils/pkg/zip"
+	"go.foxforensics.dev/futils/pkg/hash"
+	"go.foxforensics.dev/futils/pkg/sys"
+	"go.foxforensics.dev/futils/pkg/zip"
 
-	"github.com/f0x4n6/ffind/internal/windows"
+	"go.foxforensics.dev/ffind/internal/windows"
 )
 
 const (
@@ -22,7 +22,7 @@ const (
 )
 
 const (
-	Version = "0.5.5"
+	Version = "0.5.6"
 )
 
 type ffind struct {

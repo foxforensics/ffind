@@ -11,7 +11,7 @@ import (
 
 	"github.com/mxk/go-vss"
 
-	"github.com/f0x4n6/futils/pkg/sys"
+	"go.foxforensics.dev/futils/pkg/sys"
 )
 
 const (
