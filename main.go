@@ -38,9 +38,9 @@ import (
 	"flag"
 	"io"
 
-	"go.foxforensics.dev/futils/pkg/sys"
+	"go.foxforensics.eu/futils/pkg/sys"
 
-	"go.foxforensics.dev/ffind/internal/ffind"
+	"go.foxforensics.eu/ffind/internal/ffind"
 )
 
 func main() {

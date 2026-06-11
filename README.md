@@ -2,7 +2,7 @@
 Find forensic artifacts in mount points or the live system.
 
 ```console
-go install go.foxforensics.dev/ffind@latest
+go install go.foxforensics.eu/ffind@latest
 ```
 
 ## Usage

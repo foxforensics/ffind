@@ -7,8 +7,8 @@ import (
 	"slices"
 	"testing"
 
-	"go.foxforensics.dev/futils/pkg/sys"
-	"go.foxforensics.dev/futils/pkg/zip"
+	"go.foxforensics.eu/futils/pkg/sys"
+	"go.foxforensics.eu/futils/pkg/zip"
 )
 
 var (

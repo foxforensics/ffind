@@ -9,9 +9,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/mxk/go-vss"
-
-	"go.foxforensics.dev/futils/pkg/sys"
+	"go.foxforensics.eu/futils/pkg/sys"
 )
 
 const (

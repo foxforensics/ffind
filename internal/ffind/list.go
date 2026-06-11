@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"go.foxforensics.dev/futils/pkg/sys"
+	"go.foxforensics.eu/futils/pkg/sys"
 )
 
 func ShadowCopy(_ string) (dir string, err error) {
